@@ -1,0 +1,10 @@
+# ForgeSight AI runtime dependencies (CPU only, no GPU or PyTorch needed).
+# Tested with Python 3.11 on Windows 11; resolves to prebuilt wheels on Linux x86_64 (Python 3.11 / 3.12).
+streamlit==1.65.0
+onnxruntime==1.31.0              # runs the YOLO11, PPE and fire ONNX models on the CPU
+supervision==0.30.9              # ByteTrack tracker (removed upstream in 0.31: keep this pin)
+opencv-python-headless==5.0.0.93 # headless build: no libGL needed on Linux servers
+imageio-ffmpeg==0.6.0            # bundled ffmpeg -> browser-playable H.264 output
+numpy==2.4.6
+pandas==3.0.6
+plotly==7.1.0
